@@ -10,17 +10,17 @@ const Myorder = () => {
     const [deletingproduct, setDeletingproduct] = useState(null);
     const [user] = useAuthState(auth);
     console.log(user?.email)
-   /* //    const [orders,setorders]=useState([]);
-    //    useEffect(()=> {
-    //        fetch(`https://pacific-harbor-82020.herokuapp.com/useorder?clientemail=${user?.email}`,{
-    //         method: "GET",
-    //         headers: {
-    //           authorization: `Bearer ${localStorage.getItem('accessToken')}`
-    //    }})
-    //        .then(res=>res.json())
-    //        .then(data=>setorders(data))
-    //    },[user])*/
-    const { data: orders, isLoading, refetch } = useQuery(['order',user], () => fetch(`https://pacific-harbor-82020.herokuapp.com/useorder?clientemail=${user?.email}`, {
+    /* //    const [orders,setorders]=useState([]);
+     //    useEffect(()=> {
+     //        fetch(`https://pacific-harbor-82020.herokuapp.com/useorder?clientemail=${user?.email}`,{
+     //         method: "GET",
+     //         headers: {
+     //           authorization: `Bearer ${localStorage.getItem('accessToken')}`
+     //    }})
+     //        .then(res=>res.json())
+     //        .then(data=>setorders(data))
+     //    },[user])*/
+    const { data: orders, isLoading, refetch } = useQuery(['order', user], () => fetch(`https://pacific-harbor-82020.herokuapp.com/useorder?clientemail=${user?.email}`, {
         method: "GET",
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -41,7 +41,7 @@ const Myorder = () => {
                             <th className='fs-4'>Serial </th>
 
                             <th className='fs-4'>Product Name</th>
-                           
+
                             <th className='fs-4'>Price</th>
                             <th className='fs-4'></th>
                             <th className='fs-4'></th>
