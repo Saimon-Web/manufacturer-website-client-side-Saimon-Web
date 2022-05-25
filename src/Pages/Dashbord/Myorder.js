@@ -10,7 +10,7 @@ const Myorder = () => {
     const [deletingproduct, setDeletingproduct] = useState(null);
     const [user] = useAuthState(auth);
     console.log(user?.email)
-    //    const [orders,setorders]=useState([]);
+   /* //    const [orders,setorders]=useState([]);
     //    useEffect(()=> {
     //        fetch(`https://pacific-harbor-82020.herokuapp.com/useorder?clientemail=${user?.email}`,{
     //         method: "GET",
@@ -19,7 +19,7 @@ const Myorder = () => {
     //    }})
     //        .then(res=>res.json())
     //        .then(data=>setorders(data))
-    //    },[user])
+    //    },[user])*/
     const { data: orders, isLoading, refetch } = useQuery(['order',user], () => fetch(`https://pacific-harbor-82020.herokuapp.com/useorder?clientemail=${user?.email}`, {
         method: "GET",
         headers: {
@@ -65,8 +65,6 @@ const Myorder = () => {
                             refetch={refetch}
                             setDeletingproduct={setDeletingproduct}
                         ></OrderDeletemodal>}
-
-
 
                     </tbody>
                 </table>
