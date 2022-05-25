@@ -10,7 +10,7 @@
 //     // const { id } = useParams();
     // const [product, setProduct] = useState({ orderQunatity: '' });
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/product/${id}`)
+    //     fetch(`https://pacific-harbor-82020.herokuapp.com/product/${id}`)
     //         .then(res => res.json())
     //         .then(data => setProduct(data))
     // }, [])
@@ -27,7 +27,7 @@
 //         if (numberRef.current.value >= minimumNumber && numberRef.current.value <= maximumNumber) {
 //             const orderQunatity = numberRef.current.value;
 //             const product = { orderQunatity }
-//             const url = `http://localhost:5000/product/${id}`;
+//             const url = `https://pacific-harbor-82020.herokuapp.com/product/${id}`;
 //             fetch(url, {
 //                 method: "PUT",
 //                 headers: {
@@ -60,7 +60,7 @@
 //             const product = {
 //                 orderQunatity
 //             }
-//             const url = `http://localhost:5000/product/${id}`;
+//             const url = `https://pacific-harbor-82020.herokuapp.com/product/${id}`;
 //             fetch(url, {
 //                 method: "PUT",
 //                 headers: {

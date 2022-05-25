@@ -11,7 +11,7 @@ const Manageproduct = () => {
    
     const [deletingproduct, setDeletingproduct] = useState(null);
     
-    const { data: products, isLoading, refetch } = useQuery('product', () => fetch('http://localhost:5000/product', {
+    const { data: products, isLoading, refetch } = useQuery('product', () => fetch('https://pacific-harbor-82020.herokuapp.com/product', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

@@ -10,7 +10,7 @@ const Payment = () => {
     const { id } = useParams();
 
     const stripePromise = loadStripe('pk_test_51L18fdFYWyN4h3Jv6aI6oQHYd2qJHDoqSv8OMYx5ET5nXbd58HG5VTQpjj9Qpn1KwotYSJBeTmkMcWYMmiA8GRZu00s7lavQ2e');
-    const url = `http://localhost:5000/order/${id}`
+    const url = `https://pacific-harbor-82020.herokuapp.com/order/${id}`
     const { data: order, isLoading, refetch } = useQuery(['booking', id], () => fetch(url, {
         method: 'GET',
         headers: {

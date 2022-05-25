@@ -7,7 +7,7 @@ import OrderDeletemodal from './OrderDeletemodal';
 const Allorder = () => {
     const [deletingproduct, setDeletingproduct] = useState(null);
     const{data:orders,isLoading,refetch}=useQuery('orders',()=> 
-    fetch('http://localhost:5000/order',{
+    fetch('https://pacific-harbor-82020.herokuapp.com/order',{
         method:'GET',
         headers:{
             authorization:`Bearer ${localStorage.getItem('accessToken')}`

@@ -6,7 +6,7 @@ const OrderDeletemodal = ({deletingproduct,setDeletingproduct,refetch}) => {
     const handleDelete=(_id)=> {
       
       // console.log(id,name)
-       const url=` http://localhost:5000/order/${_id}`
+       const url=` https://pacific-harbor-82020.herokuapp.com/order/${_id}`
        fetch(url,{
            method:"DELETE"
        })

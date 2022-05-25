@@ -5,7 +5,7 @@ const Makeadminrow = ({ user, index,refetch }) => {
     const { email,role } = user;
     const makeadmin =()=> {
       
-        fetch(`http://localhost:5000/user/admin/${email}`,{
+        fetch(`https://pacific-harbor-82020.herokuapp.com/user/admin/${email}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json',

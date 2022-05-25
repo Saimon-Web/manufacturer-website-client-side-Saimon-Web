@@ -6,7 +6,7 @@ import Product from './Product';
 
 const Products = () => {
 
-    const {data:products,isLoading,refetch}=useQuery('/product',()=> fetch('http://localhost:5000/product').then(res=>res.json()))
+    const {data:products,isLoading,refetch}=useQuery('/product',()=> fetch('https://pacific-harbor-82020.herokuapp.com/product').then(res=>res.json()))
     if(isLoading){
         return <Loading></Loading>
     }

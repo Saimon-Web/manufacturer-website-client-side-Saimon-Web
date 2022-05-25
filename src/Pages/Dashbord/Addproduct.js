@@ -20,7 +20,7 @@ const Addproduct = () => {
             description,
             img
         }
-        fetch('http://localhost:5000/product',{
+        fetch('https://pacific-harbor-82020.herokuapp.com/product',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

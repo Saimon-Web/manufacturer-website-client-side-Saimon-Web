@@ -7,7 +7,7 @@ const Myorderrow = ({order,refetch,setDeletingproduct,index}) => {
     const [product, setProduct] = useState({ });
     const navigate=useNavigate();
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/product/${id}`)
+    //     fetch(`https://pacific-harbor-82020.herokuapp.com/product/${id}`)
     //         .then(res => res.json())
     //         .then(data => setProduct(data))
     // }, [])

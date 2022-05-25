@@ -12,7 +12,7 @@ const Myorder = () => {
     console.log(user?.email)
     //    const [orders,setorders]=useState([]);
     //    useEffect(()=> {
-    //        fetch(`http://localhost:5000/useorder?clientemail=${user?.email}`,{
+    //        fetch(`https://pacific-harbor-82020.herokuapp.com/useorder?clientemail=${user?.email}`,{
     //         method: "GET",
     //         headers: {
     //           authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -20,7 +20,7 @@ const Myorder = () => {
     //        .then(res=>res.json())
     //        .then(data=>setorders(data))
     //    },[user])
-    const { data: orders, isLoading, refetch } = useQuery(['order',user], () => fetch(`http://localhost:5000/useorder?clientemail=${user?.email}`, {
+    const { data: orders, isLoading, refetch } = useQuery(['order',user], () => fetch(`https://pacific-harbor-82020.herokuapp.com/useorder?clientemail=${user?.email}`, {
         method: "GET",
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

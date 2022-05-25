@@ -23,7 +23,7 @@ const Bookingmodal = ({ product,setProduct }) => {
             clientemail:user.email,
 
         }
-        fetch('http://localhost:5000/order',{
+        fetch('https://pacific-harbor-82020.herokuapp.com/order',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
