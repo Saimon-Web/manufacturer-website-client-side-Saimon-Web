@@ -1,0 +1,9 @@
+.footlink a{
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+.subfoot .email{
+   padding: 5px 0px;
+   margin-bottom: 10px;
+}

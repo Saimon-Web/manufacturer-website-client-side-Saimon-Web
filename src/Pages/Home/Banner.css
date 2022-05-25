@@ -1,0 +1,9 @@
+.backgroundimg{
+    background-image: url(../../images/two.webp);
+    height: 600px;
+}
+.heading{
+   
+    font-size: 40px;
+    font-weight: bold;
+}
