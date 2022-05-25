@@ -2,7 +2,7 @@ import React from 'react';
 import not from '../../images/notfound.png'
 const Notfound = () => {
     return (
-        <div>
+        <div className=''>
             <img height='500px' width='500px' src={not} alt="" />
         </div>
     );
