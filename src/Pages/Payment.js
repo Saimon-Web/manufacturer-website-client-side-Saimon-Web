@@ -26,17 +26,17 @@ const Payment = () => {
         <div>
             <h3 className='text-warning'>Order Id:{order._id}</h3>
             <div class="card">
-            <h2 class="card-title">payment for {order.name}</h2>
-                    <h4 className='text-success'>please pay ${order.price}</h4>
+                <h2 class="card-title">payment for {order.name}</h2>
+                <h4 className='text-success'>please pay ${order.price}</h4>
 
                 <div class="card-body">
 
-             
+
                     <div className='w-25 mx-auto'>
-                    <Elements stripe={stripePromise}>
-                        <CheckoutForm
-                        order={order} ></CheckoutForm>
-                    </Elements>
+                        <Elements stripe={stripePromise}>
+                            <CheckoutForm
+                                order={order} ></CheckoutForm>
+                        </Elements>
                     </div>
                 </div>
             </div>

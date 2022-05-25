@@ -34,27 +34,27 @@ function App() {
         <Route path='/portfolio' element={<Portfolio></Portfolio>}> </Route>
         <Route path='/blog' element={<Blog></Blog>}> </Route>
         <Route path='*' element={<Notfound></Notfound>}> </Route>
-            
+
         <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
-        <Route index  element={<Myprofile></Myprofile>}></Route>
+          <Route index element={<Myprofile></Myprofile>}></Route>
           <Route path='myorder' element={<Myorder></Myorder>}></Route>
           <Route path='myreview' element={<Addreview></Addreview>}></Route>
-         
+
           <Route path='addproduct' element={<RequireAdmin><Addproduct></Addproduct></RequireAdmin>}></Route>
           <Route path='allorder' element={<RequireAdmin><Allorder></Allorder></RequireAdmin>}></Route>
           <Route path='manageproduct' element={<RequireAdmin><Manageproduct></Manageproduct></RequireAdmin>}></Route>
           <Route path='makeadmin' element={<RequireAdmin><Makeadmin></Makeadmin></RequireAdmin>}></Route>
-           </Route>
+        </Route>
         <Route path='/product/:id' element={
           <RequireAuth>
-        
-          <Purchase> </Purchase>
+
+            <Purchase> </Purchase>
           </RequireAuth>
         }> </Route>
-        
+
         <Route path='/order/:id' element={
           <RequireAuth>
-           <Payment></Payment>
+            <Payment></Payment>
           </RequireAuth>
         }> </Route>
       </Routes>
