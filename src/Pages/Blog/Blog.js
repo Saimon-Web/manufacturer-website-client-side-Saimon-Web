@@ -22,7 +22,7 @@ const Blog = () => {
                 2.Global state
                 3.Server state
                 4.URL state</p>
-                <h2>How does prototypical inheritance work?</h2>
+            <h2>How does prototypical inheritance work?</h2>
 
             <p>Prototypal Inheritance: A prototype is a working object instance. Objects inherit directly from other objects.
 
@@ -34,12 +34,12 @@ const Blog = () => {
 
                 Why Does this Matter?</p>
 
-                <h2> Why you do not set the state directly in React</h2>
-                <p>One should never update the state directly because of the following reasons:
+            <h2> Why you do not set the state directly in React</h2>
+            <p>One should never update the state directly because of the following reasons:
 
-If you update it directly, calling the setState() afterward may just replace the update you made.
-When you directly update the state, it does not change this.state immediately. Instead, it creates a pending state transition, and accessing it after calling this method will only return the present value.
-You will lose control of the state across all components.</p>
+                If you update it directly, calling the setState() afterward may just replace the update you made.
+                When you directly update the state, it does not change this.state immediately. Instead, it creates a pending state transition, and accessing it after calling this method will only return the present value.
+                You will lose control of the state across all components.</p>
         </div>
     );
 };
