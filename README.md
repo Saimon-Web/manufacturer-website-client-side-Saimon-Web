@@ -1,4 +1,5 @@
 # Car manufacture website
+https://project-53210.web.app/
 
 #Uses Technologies
 * react router
@@ -7,6 +8,8 @@
 * axios
 * react toastify
 * firebase authentication
+*paymen cart stripe
+*nested route
 # Features
 * Banner
 * add item form
