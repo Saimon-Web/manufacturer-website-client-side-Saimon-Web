@@ -57,22 +57,16 @@ const Myprofile = () => {
 
     return (
         <div className=''>
-            <h2 className='text-center'>my profile</h2>
-
+      
             <h4 className='text-center'>Name:{user?.displayName}</h4>
-            <h5 className='text-center'>Email:{user?.email}</h5>
-            <Undermyprofile></Undermyprofile>
+            <h5 className='text-center'>Email:{user?.email}</h5>        
+            <div className='mt-5'>
             <Singleprofile></Singleprofile>
-
-
-
-            <form action='' onSubmit={submitHandle}>
-
+            </div>
+            <form className='mt-5' action='' onSubmit={submitHandle}>
                 <label class="form-label" for="name">Your Name</label>
                 <input value={user?.displayName} name='name' type="text" class="form-control" id="email" placeholder="Your Name" />
                 <br />
-
-
 
                 <label class="form-label" for="productname">Education </label>
                 <input type="text" name='education' class="form-control" id="productname" placeholder="Education " />

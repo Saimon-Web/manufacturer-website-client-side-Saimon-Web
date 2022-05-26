@@ -18,8 +18,11 @@ const Singleprofile = () => {
     }
 
     return (
-        <div>
+        <div className='border shadow py-5'>
             <h2>single : {singles.length}</h2>
+            <p>Education:{singles.education}</p>
+              <p>Phone:{singles.phone}</p>
+              <p>Linkdinprofile{singles.linkdinprofile}</p>
         </div>
     );
 };
