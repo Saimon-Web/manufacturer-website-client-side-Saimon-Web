@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import auth from '../../firebase.init';
@@ -6,18 +6,12 @@ import Loading from '../Loading';
 
 const Undermyprofile = () => {
     const [user]=useAuthState(auth)
-    const { data: userprofiles, isLoading, refetch } = useQuery('userprofile' () => fetch(`https://pacific-harbor-82020.herokuapp.com/useprofile`, {
-        method: "GET",
-        // headers: {
-        //     authorization: `Bearer ${localStorage.getItem('accessToken')}`
-        // }
-    }).then(res => res.json()))
-
-
-    if (isLoading) {
-        return <Loading></Loading>
-    }
-
+    const [userprofiles,setprofiles]=useState([]);
+    useEffect(()=> {
+        fetch('https://pacific-harbor-82020.herokuapp.com/userprofile')
+        .then(res => res.json())
+        .then(data => setprofiles(data))
+    },[])
     return (
         <div>
           <h2>userprofile:  {userprofiles.length}</h2>
