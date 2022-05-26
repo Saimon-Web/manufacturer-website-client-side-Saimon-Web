@@ -6,7 +6,7 @@ import Loading from '../Loading';
 
 const Undermyprofile = () => {
     const [user]=useAuthState(auth)
-    const { data: userprofiles, isLoading, refetch } = useQuery(['useprofile', user], () => fetch(`https://pacific-harbor-82020.herokuapp.com/useprofile?useremail=${user?.email}`, {
+    const { data: userprofiles, isLoading, refetch } = useQuery('userprofile' () => fetch(`https://pacific-harbor-82020.herokuapp.com/useprofile`, {
         method: "GET",
         // headers: {
         //     authorization: `Bearer ${localStorage.getItem('accessToken')}`
