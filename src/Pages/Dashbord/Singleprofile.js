@@ -6,7 +6,7 @@ import Loading from '../Loading';
 
 const Singleprofile = () => {
     const [user]=useAuthState(auth)
-    const { data:singles, isLoading, refetch } = useQuery(['userprofile', user], () => fetch(`https://pacific-harbor-82020.herokuapp.com/userprofile?useremail=${user?.email}`, {
+    const { data:singles, isLoading, refetch } = useQuery(['userprofile', user], () => fetch(`https://pacific-harbor-82020.herokuapp.com/singleprofile?useremail=${user?.email}`, {
         method: "GET",
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
