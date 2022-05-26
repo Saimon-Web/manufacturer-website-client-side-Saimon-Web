@@ -1,26 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useQuery } from 'react-query';
 import auth from '../../firebase.init';
 
 const Myprofile = () => {
     const [user] = useAuthState(auth);
+
+    // const [userprofile, setuserprofile] = useState([])
+    // useEffect((), [])
+
+
+  
+
+
+
+    const useremail = user?.email;
+
     const submitHandle = event => {
         event.preventDefault();
- 
+
         const phone = event.target.phone.value;
         const name = event.target.name.value;
         const education = event.target.education.value;
         const linkdinprofile = event.target.linkdinprofile.value;
-        console.log(phone,name,education,linkdinprofile)
+        console.log(phone, name, education, linkdinprofile)
 
 
         const userprofile = {
-           name,
+            useremail,
+            name,
             phone,
             education,
             linkdinprofile,
-           
-           
+
+
 
         }
         fetch('https://pacific-harbor-82020.herokuapp.com/userprofile', {
@@ -32,11 +45,11 @@ const Myprofile = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log('addedd informatioon profile',data)
-              
+                console.log('addedd informatioon profile', data)
+
                 event.target.reset()
             })
-            
+
 
     }
 
@@ -55,22 +68,22 @@ const Myprofile = () => {
                 <input value={user?.displayName} name='name' type="text" class="form-control" id="email" placeholder="Your Name" />
                 <br />
 
-        
-                
+
+
                 <label class="form-label" for="productname">Education </label>
-                <input  type="text" name='education' class="form-control" id="productname" placeholder="Education " />
+                <input type="text" name='education' class="form-control" id="productname" placeholder="Education " />
                 <br />
 
                 <label class="form-label" for="productname">Linkdin profile</label>
                 <input type="text" name='linkdinprofile' class="form-control" id="address" placeholder="Address" />
 
-                <br /> 
-        
+                <br />
+
                 <label class="form-label" for="productname">phone number</label>
                 <input type="number" class="form-control" name='phone' id="phone" placeholder="phone number" />
-         
+
                 <br />
-         
+
                 <button href="#" class="btn btn-warning w-full">
                     Submit
                 </button>
