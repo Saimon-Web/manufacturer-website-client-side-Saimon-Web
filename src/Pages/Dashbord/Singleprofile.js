@@ -25,8 +25,8 @@ const Singleprofile = () => {
                     <p>Education:{single.education}</p>
                     <p>Phone:{single.phone}</p>
                     <p>Linkdinprofile{single.linkdinprofile}</p>
-                    <button>Update</button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+                  
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">update</button>
 
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -38,18 +38,23 @@ const Singleprofile = () => {
                                 <div class="modal-body">
                                     <form>
                                         <div class="mb-3">
-                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                            <input type="text" class="form-control" id="recipient-name" />
+                                            <label for="recipient-name" class="col-form-label">Education:</label>
+                                            <input type="text" name='education' class="form-control" id="recipient-name" />
                                         </div>
                                         <div class="mb-3">
-                                            <label for="message-text" class="col-form-label">Message:</label>
-                                            <textarea class="form-control" id="message-text"></textarea>
+                                            <label for="message-text" class="col-form-label">Linkdin Profile:</label>
+                                            <input type="text" name='linkdinprofile' class="form-control" id="recipient-name" />
                                         </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Phone Number:</label>
+                                            <input type="text" name='phone' class="form-control" id="recipient-name" />
+                                        </div>
+                                        <input type="submit" className='btn btn-primary' value="Update" />
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Send message</button>
+                                    
                                 </div>
                             </div>
                         </div>
