@@ -20,9 +20,13 @@ const Singleprofile = () => {
     return (
         <div className='border shadow py-5'>
             <h2>single : {singles.length}</h2>
-            <p>Education:{singles.education}</p>
-              <p>Phone:{singles.phone}</p>
-              <p>Linkdinprofile{singles.linkdinprofile}</p>
+        {
+            singles.map(single=> <>
+                 <p>Education:{single.education}</p>
+              <p>Phone:{single.phone}</p>
+              <p>Linkdinprofile{single.linkdinprofile}</p>
+            </>)
+        }
         </div>
     );
 };
