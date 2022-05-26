@@ -15,6 +15,13 @@ const Undermyprofile = () => {
     return (
         <div>
           <h2>userprofile:  {userprofiles.length}</h2>
+          {
+              userprofiles.map(user => <>
+              <p>Education:{user.education}</p>
+              <p>Phone:{user.phone}</p>
+              <p>Linkdinprofile{user.linkdinprofile}</p>
+              </>)
+          }
             
         </div>
     );
