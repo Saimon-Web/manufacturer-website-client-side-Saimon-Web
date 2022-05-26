@@ -40,7 +40,7 @@ const Singlepro = ({single}) => {
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form>
+                                    <form onSubmit={handleSubmit}>
                                         <div class="mb-3">
                                             <label for="recipient-name" class="col-form-label">Education:</label>
                                             <input type="text" name='education' class="form-control" id="recipient-name" />
