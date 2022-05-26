@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import auth from '../../firebase.init';
+import Singleprofile from './Singleprofile';
 import Undermyprofile from './Undermyprofile';
 
 const Myprofile = () => {
@@ -61,6 +62,7 @@ const Myprofile = () => {
             <h4 className='text-center'>Name:{user?.displayName}</h4>
             <h5 className='text-center'>Email:{user?.email}</h5>
             <Undermyprofile></Undermyprofile>
+            <Singleprofile></Singleprofile>
 
 
 
