@@ -34,9 +34,6 @@ const Myprofile = () => {
             phone,
             education,
             linkdinprofile,
-
-
-
         }
         fetch('https://pacific-harbor-82020.herokuapp.com/userprofile', {
             method: 'POST',
@@ -48,7 +45,7 @@ const Myprofile = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('addedd informatioon profile', data)
-
+                window.location.reload();
                 event.target.reset()
             })
 
