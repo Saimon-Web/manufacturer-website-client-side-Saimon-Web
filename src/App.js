@@ -58,6 +58,7 @@ function App() {
           </RequireAuth>
         }> </Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer></ToastContainer>
     </div>
   );
